@@ -2,7 +2,8 @@
 This is some scripts to help push the BlueScan JSON file to a Custom Google Map
 A demo map can be found at https://goo.gl/xOJ5sM
 
-You can download BlueScanner (Renamed Bluetooth 4.0 Scanner) by John Abraham here: https://play.google.com/store/apps/details?id=com.bluemotionlabs.bluescan&hl=en
+You can download BlueScanner (Renamed Bluetooth 4.0 Scanner) by John Abraham here:
+https://play.google.com/store/apps/details?id=com.bluemotionlabs.bluescan&hl=en
 
 # Special Thanks
 - Thanks go to John Abraham for creating such an awesome tool and his help with data collection. 
