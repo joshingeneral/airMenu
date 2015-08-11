@@ -52,8 +52,7 @@ Step 4 - Now we need to create a custom map on google and upload the output.csv 
         
         7) Give it a description and name if you like, otherwise just enjoy.
         
-Step 6 - Now you have a large map with Longitude and Latitude for all the bluetooth devices you have collected. The name filed will be the
-        MAC address of the device and you can scroll as you see fit. 
+Step 6 - Now you have a large map with Longitude and Latitude for all the bluetooth devices you have collected. The name field will be the MAC address of the device and you can scroll around the map as you see fit. 
         
         
 #Future Features
