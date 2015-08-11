@@ -56,8 +56,7 @@ Step 6 - Now you have a large map with Longitude and Latitude for all the blueto
         
         
 #Future Features
- -- Create a web page version of this script
- 
- -- Add an option for windows users as well (Probally Powershell)
+ - Create a web page version of this script
+ - Add an option for windows users as well (Probally Powershell)
  
 
