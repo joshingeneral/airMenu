@@ -1,14 +1,15 @@
 # BlueScanParser
 This is some scripts to help push the BlueScan JSON file to a Custom Google Map
 A demo map can be found at https://goo.gl/xOJ5sM
+
 You can download BlueScanner (Renamed Bluetooth 4.0 Scanner) by John Abraham here: https://play.google.com/store/apps/details?id=com.bluemotionlabs.bluescan&hl=en
 
 # Special Thanks
 - Thanks go to John Abraham for creating such an awesome tool and his help with data collection. 
-- Wireless CTF at Defcon for letting me present and creating an enviorment to play and learn.
+- Wireless CTF at Defcon for letting me present and creating an environment to play and learn.
 
 #Legal things our lawyers make us say
-By using this code you agree to not hold joshingeneral or his affiliates liable for what you do with it. As such, you should only email those that you have been given permission to email by the individual holding the account or have been authorized by their authoritative parties. You should also read the state and local laws and country laws act in order to ensure compliance and not face legal fines, much of which is covered by the CAN-SPAM act of 2003 in the US. 
+By using this code you agree to not hold joshingeneral or his affiliates liable for what you do with it. If someone asks you don't scan them or upload there data, then don't. Don't trespass  in order to get signals and or do this in places where it is prohibited (planes, government installations etc). That being said in most cases what is open and transmitting is fair game, but all of this is subject to local and federal laws and you should work within them at all times. 
 
 #Requirements
 A Google Account and Android Device.
