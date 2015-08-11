@@ -33,6 +33,7 @@ Step 3 - run:
         ./blueScanParserMaps.sh [file]
         Where [file] is the file your created from the JSON data (I named it bluescan.json)
         This will create a file called output.csv
+        
 Step 4 - Now we need to create a custom map on google and upload the output.csv file
 
         1)Next goto https://www.google.com/maps
