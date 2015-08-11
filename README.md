@@ -21,7 +21,7 @@ Install should be pretty easy.
 
 Step 1 - Download https://play.google.com/store/apps/details?id=com.bluemotionlabs.bluescan&hl=en
 
-Step 2 - Collect some data for the map. 
+Step 2 - Collect some data for the map by scanning with BlueScan
 
 Step 3 - Export the JSON email using the app, normally I just email it to myself and save it to a file named bluescan.json, but your are not limited to this.
 
