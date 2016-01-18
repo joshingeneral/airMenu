@@ -1,6 +1,9 @@
 #!/bin/bash
-while true; do 
+while true; do
+#Set path varrible
 pcapPath="/mnt/webdav2/pcaps/"
+#Make directory if does not exist already
+mkdir -p "$pcapPath""proccessed/"
 if [ -f "$pcapPath"*.cap ]; then
 pcap=$(ls -tra "$pcapPath"*.cap | tail -n1)
 temp=$(echo "$RANDOM".tmp)
@@ -22,21 +25,22 @@ echo $pcap >> $text
 echo "=============================" >> $text
 
 #Figure out Venders from MAC
-while read line; 
-do 
- mac=$(echo $line | egrep "^........" -o); 
- vender=$(egrep "$mac" -i macs.lst | awk '{print $2}'); 
-# vender2=$(egrep "$mac" -i macs.lst | sed -e 's/\:/\-/g' | awk '{print $2}'); 
- if [[ $vender == "" || $mac == "" ]]; 
+while read line;
+do
+ mac=$(echo $line | egrep "^........" -o);
+ vender=$(egrep "$mac" -i macs.lst | awk '{print $2}');
+# vender2=$(egrep "$mac" -i macs.lst | sed -e 's/\:/\-/g' | awk '{print $2}');
+ if [[ $vender == "" || $mac == "" ]];
   then echo "$line" >> $text
- else 
+ else
   echo "$line ($vender)" >> $text
- fi; 
+ fi;
 done < $temp
 
 
-#cat $text >> "$pcap".txt 
+#cat $text >> "$pcap".txt
 mv -f $pcap "$pcapPath""proccessed/"
+cat $text | mutt -s "$pcap ready" -- joshingeneral@gmail.com
 else
   echo "No files found"
 fi
