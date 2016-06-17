@@ -4,8 +4,8 @@ while true; do
 pcapPath="/mnt/webdav2/pcaps/"
 #Make directory if does not exist already
 mkdir -p "$pcapPath""proccessed/"
-if [ -f "$pcapPath"*.cap ]; then
-pcap=$(ls -tra "$pcapPath"*.cap | tail -n1)
+pcap=$(ls -tra "$pcapPath"*.cap 2>/dev/null | tail -n1)
+if [[ $pcap != "" ]]; then
 temp=$(echo "$RANDOM".tmp)
 text="$pcap".txt
 echo "Using pcap: $pcap"
@@ -41,6 +41,9 @@ done < $temp
 #cat $text >> "$pcap".txt
 mv -f $pcap "$pcapPath""proccessed/"
 cat $text | mutt -s "$pcap ready" -- joshingeneral@gmail.com
+text=""
+
+#Reset text to null after send
 else
   echo "No files found"
 fi
