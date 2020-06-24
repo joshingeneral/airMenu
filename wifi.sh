@@ -12,9 +12,9 @@ echo "Using pcap: $pcap"
 echo "Writing out to: $text"
 
 #List out the SSID's in order
-tshark -nnr $pcap | egrep SSID | egrep "[0-9a-f][0-9a-f]\:[0-9a-f][0-9a-f]\:[0-9a-f][0-9a-f]\:.*" -o | sed 's/802.*SSID\=//g' | awk '{print "@SSID="$4" "$5" "$6} ' | sort -u >> $temp
+tshark -nnr $pcap -Y "wlan.fc.type_subtype eq 4" | egrep SSID | egrep "[0-9a-f][0-9a-f]\:[0-9a-f][0-9a-f]\:[0-9a-f][0-9a-f]\:.*" -o | sed 's/802.*SSID\=//g' | awk '{print "@SSID="$4" "$5" "$6} ' | sort -u >> $temp
 #List out all the devices attempting to connect
-tshark -nnr $pcap | egrep SSID | egrep "[0-9a-f][0-9a-f]\:[0-9a-f][0-9a-f]\:[0-9a-f][0-9a-f]\:.*" -o | sed 's/802.*SSID\=//g' | awk '{print $1","$2","$4" "$5" "$6}' | sort -u >> $temp
+tshark -nnr $pcap -Y "wlan.fc.type_subtype eq 4" | egrep SSID | egrep "[0-9a-f][0-9a-f]\:[0-9a-f][0-9a-f]\:[0-9a-f][0-9a-f]\:.*" -o | sed 's/802.*SSID\=//g' | awk '{print $1","$2","$4" "$5" "$6}' | sort -u >> $temp
 
 #Load mac database from wireshark
 curl "https://code.wireshark.org/review/gitweb?p=wireshark.git;a=blob_plain;f=manuf" | awk '{print $1" "$2}' > macs.lst
